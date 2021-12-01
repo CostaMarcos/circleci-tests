@@ -12,36 +12,8 @@ jobs:
       - run:
           name: Executando os Testes da Aplicação
           command: npm run testing
-  compilar-aplicacao:
-    docker:
-      - image: circleci/node:14.10
-    steps:
-      - checkout
-      - run:
-          name: Instalando as Dependências do Node
-          command: npm install --save
-      - run:
-          name: Compilando a Aplicação
-          command: npm run build
-  deploy-api:
-    docker:
-      - image: circleci/node:14.10
-    steps:
-      - checkout
-      - run:
-          name: Instalando as Dependências do Node
-          command: npm install --save
-      - run:
-          name: Compilando a Aplicação
-          command: npm run build
-      - run:
-          name: Deploy da API
-          command: npm run deploy
-  # check if release have tag
-  # if have tag, then deploy to production
-
 
 workflows:
-  estrutura-de-testes:
+  fluxo-de-trabalho-principal:
     jobs:
       - executar-testes
