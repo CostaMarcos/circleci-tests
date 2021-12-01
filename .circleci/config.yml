@@ -22,3 +22,5 @@ workflows:
   fluxo-de-trabalho-principal:
     jobs:
       - executar-testes
+
+# Um comentário de exemplo
