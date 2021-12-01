@@ -1,26 +1,23 @@
 version: 2.1
 
-general:
-  branches:
-    only:
-      - release
-
 jobs:
-  executar-testes:
-    docker:
-      - image: circleci/node:14.10
-    steps:
-      - checkout
-      - run:
-          name: Instalando as Dependências do Node
-          command: npm install --save
-      - run:
-          name: Executando os Testes da Aplicação
-          command: npm run testing
+    executar-testes:
+        docker:
+            - image: circleci/node:14.10
+        steps:
+            - checkout
+            - run:
+                  name: Instalando as Dependências do Node
+                  command: npm install --save
+            - run:
+                  name: Executando os Testes da Aplicação
+                  command: npm run testing
 
 workflows:
-  fluxo-de-trabalho-principal:
-    jobs:
-      - executar-testes
-
-# Um comentário de exemplo
+    fluxo-de-trabalho-principal:
+        jobs:
+            - executar-testes:
+                  filters:
+                      branches:
+                          only:
+                              - release
