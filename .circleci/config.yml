@@ -16,4 +16,4 @@ jobs:
 workflows:
   estrutura-de-testes:
     jobs:
-      - run-tests
+      - executar-testes
