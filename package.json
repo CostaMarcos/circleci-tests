@@ -1,23 +1,11 @@
 {
 	"name": "circleci-tests",
 	"version": "1.0.0",
-	"description": "trabalho de faculdade",
-	"homepage": "https://github.com/LucasCastro99/circleci-tests#readme",
 	"main": "api.js",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/LucasCastro99/circleci-tests.git"
 	},
-	"bugs": {
-		"url": "https://github.com/LucasCastro99/circleci-tests/issues"
-	},
-	"keywords": [
-		"pipeline",
-		"circleci",
-		"tests",
-		"jest",
-		"web"
-	],
 	"scripts": {
 		"testing": "jest api.test.js",
 		"building": "gulp compress",
@@ -33,7 +21,5 @@
 		"gulp": "^4.0.2",
 		"gulp-minify": "^3.1.0",
 		"jest": "^27.3.1"
-	},
-	"author": "Lucas Castro",
-	"license": "MIT"
+	}
 }
