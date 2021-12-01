@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  run-tests:
+  executar-testes:
     docker:
       - image: circleci/node:14.10
     steps:
@@ -12,12 +12,8 @@ jobs:
       - run:
           name: Executando os Testes da Aplicação
           command: npm run testing
-      # - store-test-results:
-      #     path: tests-results
-      # - store-artifacts:
-      #     path: tests-results
 
 workflows:
-  tests-workflow:
+  estrutura-de-testes:
     jobs:
       - run-tests
