@@ -19,8 +19,10 @@
 		"web"
 	],
 	"scripts": {
-		"test-api": "jest api.test.js",
-		"exec-api": "nodemon api.js"
+		"testing": "jest api.test.js",
+		"building": "gulp compress",
+		"development": "nodemon api.js",
+		"production": "node .build/api.js"
 	},
 	"dependencies": {
 		"express": "^4.17.1",
