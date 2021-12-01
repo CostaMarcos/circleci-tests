@@ -4,3 +4,20 @@ jobs:
   run-tests:
     docker:
       - image: circleci/node:14.10
+    steps:
+      - checkout
+      - run:
+          name: Instalando as Dependências do Node
+          command: npm install --save
+      - run:
+          name: Executando os Testes da Aplicação
+          command: npm run testing
+      # - store-test-results:
+      #     path: tests-results
+      # - store-artifacts:
+      #     path: tests-results
+
+workflows:
+  tests-workflow:
+    jobs:
+      - run-tests
