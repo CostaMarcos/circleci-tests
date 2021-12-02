@@ -20,6 +20,5 @@ workflows:
                   filters:
                       branches:
                           only:
+                              - develop
                               - release
-
-# Somente um comentário de exemplo
