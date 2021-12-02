@@ -21,5 +21,3 @@ workflows:
                       branches:
                           only:
                               - release
-
-# Somente um comentário de exemplo
