@@ -1,5 +1,5 @@
 const api = require("express")();
-// teste 1
+// teste 2
 api.get("/", (request, response) => {
 	response.send({ message: "ENDPOINT" });
 });
